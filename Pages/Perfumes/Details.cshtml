@@ -1,0 +1,49 @@
+﻿@page
+@model Ghitau_Emanuela_aplication.Pages.Perfumes.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Perfume</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perfume.Brand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perfume.Brand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perfume.Country)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perfume.Country.FullName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perfume.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perfume.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perfume.AppearanceYear)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perfume.AppearanceYear)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Perfume.Shop)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Perfume.Shop.ShopName)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Perfume?.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>
